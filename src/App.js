@@ -1,4 +1,9 @@
 // import { SplitScreen } from "./SplitScreen";
+import { SmallPersonList } from "./people/SmallPersonList";
+// import { LongList } from "./people/LongList";
+// import { RegularList } from "./RegularList";
+
+import { Modal } from "./Modal";
 
 //LayOut component
 // const LeftHandComponent = ({name})=>{
@@ -41,7 +46,14 @@ function App() {
     //   <LeftHandComponent name={'hello'}/>
     //   <RightHandComponents name={'there'}/>
     // </SplitScreen>
+    // <>
+    // <RegularList items={people} resourceName='person' itemComponent={SmallPersonList}/>
+    // <RegularList items={people} resourceName='person' itemComponent={LongList}/>
+    // </>
     <>
+      <Modal>
+      <SmallPersonList person={people[0]}/>
+      </Modal>
     </>
   );
 }
