@@ -1,3 +1,5 @@
+import { printProps } from "./printProps";
+
 
 function App() {
   return (
