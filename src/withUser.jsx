@@ -7,8 +7,11 @@ export const withUser = (Component, userId) => {
     
     useEffect(()=>{
         (async()=>{
-            const response  = await fetch()
+            const response  = await fetch(`/users/${userId}`)
+            setUser(response)
         })()
     },[])
+
+    return <Component {...props} user={user}/>
   }
 }
